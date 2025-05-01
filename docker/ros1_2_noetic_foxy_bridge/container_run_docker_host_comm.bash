@@ -1,12 +1,13 @@
 #!/bin/bash
 
-IMAGE_NAME=hrjp/ubuntu:18_cudagl
-CONTAINER_NAME=ubuntu18_cudagl
+IMAGE_NAME=takahashi13/ros1_noetic:bridge
+CONTAINER_NAME=ros2_debug
 SHARE_FOLDER_PATH=""
 SHARE_FOLDER_CMD=""
 GPU_CMD=""
 CONTAINER_NAME_CMD="--name $CONTAINER_NAME"
 NETHOST_CMD="--net=host"
+IPCHOST_CMD="--ipc=host"
 
 usage_exit() {
         echo " " 1>&2
@@ -73,6 +74,8 @@ docker run -it  $CONTAINER_NAME_CMD\
             -e QT_X11_NO_MITSHM=1 \
             $GPU_CMD \
             $REMOVE_CMD \
-            $NETHOST_CMD \
             --privileged \
             $IMAGE_NAME /bin/bash
+            # $NETHOST_CMD \
+            # $IPCHOST_CMD \
+            # --user root\

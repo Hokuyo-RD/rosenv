@@ -1,7 +1,7 @@
 #!/bin/bash
 
-IMAGE_NAME=hrjp/yolox:noetic
-CONTAINER_NAME=yolox_noetic
+IMAGE_NAME=takahashi13/ros1_noetic:v2.0_bridge
+CONTAINER_NAME=ros2_debug
 SHARE_FOLDER_PATH=""
 SHARE_FOLDER_CMD=""
 GPU_CMD=""
