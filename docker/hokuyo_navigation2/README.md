@@ -21,7 +21,7 @@ WSL2 では従来のbash ファイルで行うように分けました。
     ```
     clone image:
     ```
-    docker pull takahashi13/ros1_noetic:takahashi13/ros1_noetic:v2.0_bridge
+    docker pull takahashi13/ros1_noetic:takahashi13/hokuyo_navigation2:v1.0
     ```
 
 2. ## Run a Docker container based on image
