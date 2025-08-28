@@ -47,6 +47,8 @@ RUN apt install -y ros-$ROS_DISTRO-desktop-full ros-$ROS_DISTRO-turtlesim ros-$R
 	echo "source /opt/ros/$ROS_DISTRO/setup.bash" >> ~/.bashrc && \
 	echo "source /home/colcon_ws/install/setup.bash" >> ~/.bashrc && \
 	echo "source /home/colcon_ws/install/local_setup.bash" >> ~/.bashrc && \
+	echo "export LIBGL_ALWAYS_SOFTWARE=1" >> ~/.bashrc && \
+	echo "export RMW_IMPLEMENTATION=rmw_fastrtps_cpp" >> ~/.bashrc && \
 	apt update && \
     apt install -y bash-completion gnome-terminal xdotool dbus-x11 libcanberra-gtk* x11-xserver-utils bc gedit ufw && \
     source /etc/bash_completion && \
