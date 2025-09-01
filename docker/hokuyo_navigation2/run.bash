@@ -131,6 +131,7 @@ docker run -it  $CONTAINER_NAME_CMD\
             -e QT_X11_NO_MITSHM=1 \
             -e XAUTHORITY=$XAUTHORITY \
             -v $XAUTHORITY:$XAUTHORITY \
+            -e DOCKER_ENV=1
             -p 5050:5050 \
             -p 5000:5000 \
             -p 8085:8085 \
